@@ -1,0 +1,60 @@
+// input
+
+.input {
+    margin-bottom: 2.5rem;
+
+    @include mq(sp) {
+        margin-bottom: 2rem;
+    }
+
+    &-label {
+        font-weight: 500;
+        line-height: 26px;
+        margin-bottom: 3.6rem;
+
+        @include mq(sp) {
+            margin-bottom: 2rem;
+            font-size: 1.7rem;
+        }
+
+        span {
+            display: inline-block;
+            font-size: 1.4rem;
+            margin-left: 2.3rem;
+            color: #fff;
+            background: $color-sub;
+            padding: 0 1rem;
+            border-radius: 5px;
+
+            @include mq(sp) {
+                margin-left: 1.5rem;
+            }
+        }
+    }
+
+    &-data {
+        
+        input, textarea {
+            width: 100%;
+            font-size: 16px;
+            background: $color-background;
+            border: 1px solid $color-border;
+            padding: 0 1.5rem;
+            appearance: none;
+        }
+        
+        input {
+            max-width: 500px;
+            line-height: 42px;
+        }
+
+        textarea {
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            height: 180px;
+            min-height: 180px;
+            padding: 1.5rem;
+        }
+    }
+}

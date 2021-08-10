@@ -1,0 +1,26 @@
+// faq
+
+.faq {
+
+    &-inner {
+        @include inner;
+        padding-top: 6.5rem;
+        padding-bottom: 8.5rem;
+    }
+
+    &-title {
+        @include section-title;
+    }
+
+    &-subtitle {
+        @include section-subtitle;
+        margin-bottom: 3.5rem;
+    }
+
+    &-list {
+        max-width: 910px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}

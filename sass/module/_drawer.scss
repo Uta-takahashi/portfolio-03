@@ -1,0 +1,63 @@
+// drawer
+
+.drawer {
+    position: relative;
+
+    &-toggle {
+        cursor: pointer;
+        position: absolute;
+        width: 25px;
+        height: 32px;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: 2;
+        
+        @include mq(pc) {
+            display: none;
+        }
+    }
+
+    &-icon {
+        display: inline-block;
+        position: absolute;
+        width: 21px;
+        height: 3px;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        border-radius: 2px;
+        background: linear-gradient(to right, $color-accent, $color-accent2);
+        transition: all .3s;
+
+        &:nth-child(1) {
+            top: 9px;
+        
+            .add-active & {
+                top: 50%;
+                transform: rotate(45deg);
+            }
+        }
+        
+        &:nth-child(2) {
+            top: 18px;
+            width: 13.12px;
+
+            .add-active & {
+                display: none;
+            }
+            
+        }
+        
+        &:nth-child(3) {
+            top: 27px;
+            
+            .add-active & {
+                top: 50%;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+

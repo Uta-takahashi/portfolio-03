@@ -1,0 +1,29 @@
+
+
+// レイアウト幅
+$layout-width-inner: 1020px;
+
+// ブレークポイント
+$breakpoints: (
+	"sp": "(max-width: 767px)",
+	"tab-only": "(min-width: 768px) and (max-width: #{$layout-width-inner - 1px})",
+	"tab": "(max-width: #{$layout-width-inner - 1px})",
+	"pc": "(min-width: 768px)",
+	"pc-only": "(min-width: #{$layout-width-inner})",
+	"retina": "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)",
+);
+
+//サイトで使用するカラー
+$color-main: #3BA6C9;
+$color-sub: #0C449B;
+$color-accent: #FA41CC;
+$color-accent2: #6020B0;
+$color-background: #EEFBFB;
+$color-background2: #F2F2F2;
+$color-border: #e5e5e5;
+$color-text: #333333;
+$color-text2: #444444;
+
+// フォント
+$font-family-default: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", sans-serif;
+$font-family-english: "Lato", sans-serif;

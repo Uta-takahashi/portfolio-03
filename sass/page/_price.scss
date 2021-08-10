@@ -1,0 +1,81 @@
+// price
+
+.price {
+    background: $color-background;
+
+    &-inner {
+        @include inner;
+        padding-top: 6.5rem;
+        padding-bottom: 7rem;
+    }
+
+    &-title {
+        @include section-title;
+    }
+
+    &-subtitle {
+        @include section-subtitle;
+        margin-bottom: 7rem;
+
+        @include mq(sp) {
+            margin-bottom: 5rem;
+        }
+    }
+
+    &-table {
+        max-width: 930px;
+        width: 100%;
+        margin: 0 auto;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        margin-bottom: 4rem;
+    }
+
+    &-row {
+        height: 93px;
+        background: #fff;
+
+        @include mq(sp) {
+            height: 80px;
+        }
+        
+        th,td {
+            font-weight: 700;
+            border: 1px solid $color-border;
+
+            @include mq(sp) {
+                font-size: 1.4rem;
+            }
+        }
+
+        th {
+            @include mq(pc) {
+                width: 290px;
+                padding-left: 2rem;  
+            }
+
+            @include mq(sp) {
+                width: 250px;
+                padding: 0 1rem;
+            }
+        }
+
+        td {
+            padding-left: 3rem;
+
+            @include mq(sp) {
+                padding: 0 1rem;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    &-note {
+        color: $color-text2;
+        font-weight: 700;
+        text-align: center;
+
+        @include mq(sp) {
+            font-size: 1.4rem;
+        }
+    }
+}

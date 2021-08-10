@@ -1,0 +1,40 @@
+// footer nav
+
+.fnav {
+    
+    &-list {
+        margin-bottom: 1.2rem;
+        
+        @include mq(pc) {
+            display: flex;
+        }
+
+        @include mq(sp) {
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    &-item {
+        @include mq(pc) {
+            margin-right: 1.7rem;
+        }
+
+        @include mq(sp) {
+            margin-bottom: 1rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        a {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

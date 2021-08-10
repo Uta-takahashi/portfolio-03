@@ -1,0 +1,25 @@
+// features
+
+.features {
+
+    &-inner {
+        @include inner;
+        padding-top: 8rem;
+        padding-bottom: 16rem;
+
+        @include mq(sp) {
+            padding-top: 2rem;
+            padding-bottom: 8rem;
+        }
+    }
+
+    &-title {
+        @include section-title;
+    }
+
+    &-subtitle {
+        @include section-subtitle;
+    }
+
+}
+

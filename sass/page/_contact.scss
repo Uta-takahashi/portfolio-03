@@ -1,0 +1,73 @@
+// contact
+
+.contact {
+    background: linear-gradient(to right, #05A5FA, #63FBD7);
+    
+    &-inner {
+        @include inner(910px);
+        padding: 7rem 0;
+    }
+
+    &-title {
+        @include section-title;
+        color: #fff;
+    }
+
+    &-subtitle {
+        @include section-subtitle;
+        color: #fff;
+        margin-bottom: 4.2rem;
+
+        @include mq(sp) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &-text {
+        text-align: center;
+        font-weight: 500;
+        color: #fff;
+        margin-bottom: 4.2rem;
+
+        @include mq(sp) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &-form {
+        background: #fff;
+        padding: 3.5rem 6.2rem;
+
+        @include mq(sp) {
+            padding: 3rem 2rem;
+        }
+    }
+
+    &-btn {
+        text-align: center;
+        cursor: pointer;
+
+        button {
+            @include btn;
+            padding: 0 5rem;
+
+            &:disabled {
+                background: #B2B2B2;
+            }
+        }
+    }
+
+    &-message {
+        text-align: center;
+        margin-top: 60px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background: #fff;
+        display: none;
+    
+        &.-error {
+            color: #f00;
+        }
+    }
+
+}

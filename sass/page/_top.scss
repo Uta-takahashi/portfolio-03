@@ -1,0 +1,98 @@
+// top
+
+.top {
+    overflow: hidden;
+
+    @include mq(sp) {
+        height: calc(100vh - 60px);
+        position: relative;
+        
+    }
+    
+    &-inner  {
+        @include inner(1020px);
+        @include mq(pc) {
+            position: relative;
+        }
+    }
+
+    &-content {
+        position: relative;
+        z-index: 3;
+
+        @include mq(pc) {
+            padding: 16rem 0;
+        }
+
+        @include mq(sp) {
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+        }
+    }
+
+    &-heading {
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 1.7;
+        margin-bottom: 3.8rem;
+
+        @include mq(sp) {
+            font-size: 2.8rem;
+            margin-bottom: 5.5rem;
+        }
+    }
+
+    &-text {
+        font-weight: 500;
+        margin-bottom: 3.8rem;
+
+        @include mq(sp) {
+            font-size: 1.4rem;
+            margin-bottom: 6rem;
+        }
+    }
+
+    &-btn {
+        @include mq(sp) {
+            text-align: center;
+        }
+
+        a{
+            @include btn;
+        }
+    }
+
+    &-img {
+        position: absolute;
+
+        &._circle {
+            z-index: 1;
+            top: 0;
+            right: 0;
+            overflow: hidden;
+            transform: translate(40%, -15%);
+
+
+            @include mq(sp) {
+                min-width: 500px;
+                min-height: 500px;
+            }
+        }
+
+        &._manager {
+            z-index: 2;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+
+            @include mq(tab) {
+                transform: scale(.8) translateY(-55%);
+                right: -20px;
+            }
+        }
+    }
+}

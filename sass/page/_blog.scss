@@ -1,0 +1,75 @@
+// blog
+
+.blog {
+    background: $color-background;
+
+    &-inner {
+        @include inner(1230px);
+        padding-top: 6.5rem;
+        padding-bottom: 9rem;
+    }
+
+    &-title {
+        @include section-title;
+    }
+
+    &-subtitle {
+        @include section-subtitle;
+        margin-bottom: 5.5rem;
+    }
+
+    &-list {
+        @include mq(pc) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &-item {
+        display: block;
+        position: relative;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        color: $color-text;
+        background-color: #fff;
+        transition: all .2s;
+
+        &:hover {
+            opacity: .6 !important;
+        }
+        
+        @include mq(pc) {
+            width: calc((100% - 60px) / 3);
+
+            + .blog-item {
+                margin-left: 3rem;
+            }
+        }
+
+        @include mq(sp) {
+            + .blog-item {
+                margin-top: 3rem;
+            }
+
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+
+    &-content {
+        padding: 2rem 2.4rem 3.8rem;
+    }
+
+    &-heading {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    &-date {
+        position: absolute;
+        color: $color-text2;
+        bottom: 1.1rem;
+        right: 38px;
+    }
+
+}

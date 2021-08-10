@@ -1,0 +1,32 @@
+// works
+
+.works {
+    padding-top: 6.5rem;
+    padding-bottom: 9rem;
+
+    &-title {
+        @include section-title;
+    }
+
+    &-subtitle {
+        @include section-subtitle;
+        margin-bottom: 7rem;
+    }
+    
+    // &-scroll {
+    //     overflow-x: scroll;
+    //     -ms-overflow-style: none;    /* IE、Edge用 */
+
+    //     &::-webkit-scrollbar {
+    //         display: none;
+    //     }
+    // }
+
+    &-item {
+        position: relative;
+        display: block;
+        border-radius: 10px;
+        border: 1px solid #DDDDDD;
+        height: 100%;
+    }
+}

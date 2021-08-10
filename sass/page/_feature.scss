@@ -1,0 +1,115 @@
+// feature
+
+.feature {
+    margin-top: 8rem;
+
+    @include mq(pc) {
+        &:nth-child(1),&:nth-child(3) {
+            .feature-body {
+                margin-left: auto;
+
+                @include mq(tab-only) {
+                    padding-left: 3rem;
+                }
+            }
+        }
+    
+        &:nth-child(2) {
+            .feature-content {
+                flex-direction: row-reverse;
+            }
+    
+            .feature-img {
+                margin-left: auto;
+                padding-left: 2rem;
+
+                @include mq(pc-only) {
+                    width: 45%;
+                }
+
+                @include mq(tab-only) {
+                    padding-left: 3rem;
+                }
+            }
+        }
+    }
+    
+    @include mq(pc-only) {
+        &:nth-child(3)  {
+            .feature-body {
+                padding-left: 6rem;
+            }
+        }
+    }
+
+    &-title {
+        font-size: 2.8rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 6.5rem;
+
+        @include mq(sp) {
+            font-size: 2.2rem;
+            margin-bottom: 4.5rem;
+        }
+    }
+
+    &-img {
+        @include mq(pc-only) {
+            width: 37.5%;
+        }
+
+        @include mq(sp) {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            margin-bottom: 3rem;
+        }
+    }
+
+
+    &-content {
+        @include mq(pc) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &-body {
+        @include mq(pc) {
+            width: 50%;
+        }
+
+        @include mq(sp) {
+            text-align: center;
+        }
+    }
+
+    &-lead {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 48px;
+        margin-bottom: 5rem;
+
+
+        @include mq(tab) {
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+        }
+
+        @include mq(sp) {
+            font-size: 2rem;
+            line-height: 2;
+        }
+    }
+
+    &-text {
+        font-weight: 500;
+        line-height: 26px;
+
+        @include mq(tab) {
+            font-size: 1.4rem;
+        }
+    }
+
+}
